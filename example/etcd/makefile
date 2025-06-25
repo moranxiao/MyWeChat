@@ -1,9 +1,9 @@
 all:put get
 
-put:put.cpp
-	g++ -o $@ $^ -std=c++17 -letcd-cpp-api -lcpprest
-get:get.cpp
-	g++ -o $@ $^ -std=c++17 -letcd-cpp-api -lcpprest
+put:test_put.cpp
+	g++ -o $@ $^ -std=c++17 -letcd-cpp-api -lcpprest -lspdlog -lfmt
+get:test_get.cpp
+	g++ -o $@ $^ -std=c++17 -letcd-cpp-api -lcpprest -lspdlog -lfmt
 
 .PHONY:clean
 clean:
