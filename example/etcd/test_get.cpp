@@ -12,8 +12,8 @@ void del_cb(const std::string& key,const std::string& value)
 }
 int main()
 {
-    init_logger(false,"",spdlog::level::level_enum::trace);
-    Discovery disc("http://127.0.0.1:2379","/service", put_cb,del_cb);
+    common::init_logger(false,"",spdlog::level::level_enum::trace);
+    common::Discovery disc("http://127.0.0.1:2379","/service", put_cb,del_cb);
     while(true);
     return 0;
 }
